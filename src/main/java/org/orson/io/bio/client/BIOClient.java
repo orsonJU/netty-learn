@@ -9,16 +9,14 @@ import java.nio.charset.Charset;
 public class BIOClient {
 
     public static void main(String[] args)  {
-
         BIOClient bioClient = new BIOClient();
 
         for(int i = 0; i < 100; i++ ) {
+            // 创建100个客户端发起连接
             RandomClient randomClient = bioClient.new RandomClient("Client-" + i);
             // start a thread
             new Thread(randomClient).start();
-
         }
-
     }
 
 
